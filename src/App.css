@@ -1,0 +1,233 @@
+body{
+  background: rgba(238, 238, 238, 0.1);
+  padding:0;
+  margin:0;
+  width:100%;
+  overflow-x: hidden !important;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.header{
+  padding-top:0px;
+  margin-top:0px;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap !important;
+  padding: 20px 9% !important;
+}
+.countries{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.country{
+ width:300px; 
+ margin:1.5rem;
+ background-color: aquamarine;
+ width:250px;
+ min-height:30px;
+ border-radius: 2px;
+ background-color:white;
+ margin:15px;
+ box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.096);
+ border:1px solid lightgray;
+ border-radius: 7px;
+}
+.country img{
+  width:100%;
+  min-height:200px;
+  object-fit: cover;
+  margin-top:0px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom: 1px solid lightgray;
+}
+.country .text{
+  padding:1rem;
+}
+.country .text p{
+  line-height:15px;
+}
+.country:hover{
+    transform: scale(1.009);
+    transition: .4s;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.103);
+}
+.input-section{
+  display:flex;
+  justify-content: space-between;
+  padding:20px;
+  flex-wrap: wrap;
+  padding: 20px 8%;
+}
+.SearchBox {
+  max-width:300px;
+  width:90%;
+  height:40px;
+  display:flex;
+  padding-left:7px;
+  box-shadow: 1px 1px 2px 1px lightgray;
+  border:none;
+  border-radius: 3px;
+  margin:auto;
+  margin:10px;
+}
+.SearchBox input{
+  width:100%;
+  height:100%;
+  padding:0;
+  margin:0;
+  outline:none;
+  border:none;
+  background: transparent;
+  color:inherit;
+}
+.SearchBox .fa-search{
+  background: transparent;
+  font-size:26px;
+  padding-top:7px;
+}
+.selection{
+  display:flex;
+  padding-left:7px;
+  box-shadow: 1px 1px 2px 1px lightgray;
+  border:0;
+  outline:none;
+  border-radius: 3px;
+  margin: auto;;
+  margin:10px;
+}
+.selection select{
+  outline:none;
+  border:none;
+  margin:0 20px ;
+  background-color: transparent;
+}
+
+.main-details{
+  min-width:100% !important;
+ min-height:70vh;
+ overflow: hidden ;
+ padding-bottom: 50px;
+}
+.button{
+    margin-top:10px;
+    margin-left:10%;
+    margin-bottom:40px;
+    padding:16px;
+    border:none;
+    border-radius: 0px;
+    box-shadow: 1px 1px 2px hsla(210, 11%, 22%, 0.411);
+ 
+}
+.detail-box{
+  background-color: inherit;
+  width:100%;
+}
+.details{
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  background-color: inherit;
+}
+.img-box{
+  max-width:100%;
+  width:400px;
+  min-height:350px;
+  background-color: inherit;
+  margin: 16px;
+  object-fit: cover;
+  border:1px solid rgba(233, 230, 230, 0.398)
+}
+.img-box img{
+  width:100%;
+  object-fit: cover;
+  height:100%;
+}
+.messages{
+  max-width:400px;
+  width:100%;
+  margin:auto;
+  margin:16px;
+
+}
+.messages h5{
+  padding-bottom:10px;
+  font-weight: 600;
+}
+.messages p{
+  line-height: 12px;;
+  
+}
+.messages p i{
+  margin-left:10px;
+  line-height: 20px;
+}
+
+.messages p span{
+  margin-left:10px;
+  line-height: 20px;
+  font-weight: 100;
+}
+.messages .btn{
+  border-radius:0px;
+  padding:0 10px !important;
+  box-shadow: 1px 1px 2px hsla(210, 11%, 22%, 0.411);
+  font-size: 13px;
+}
+.messages .borders{
+  display:inline-block;
+  margin-top:10px;
+  border:none;
+}
+@media (max-width:450px){
+  .img-box{
+   min-height:270px !important;
+   object-fit: contain;
+  }
+  .messages p{
+    font-size: 14px;
+    margin-top:-7px !important;
+  }
+ 
+  .main-details{
+    padding-bottom:10px;
+  }
+  .button{
+    margin-left:19px;
+  }
+  .input-section{
+    padding: 10px;
+  }
+}
+
+/*loading animation( made by me) */
+
+.animations{
+  margin-top: 20px;
+}
+.animations div{
+  display:inline-block;
+  width:15px;
+  height:15px;
+  margin:4px;
+  border-radius: 50%;
+  background-color: rgba(19, 95, 139, 0.759);
+  animation-name:load;
+  animation-timing-function: ease-in-out; 
+  animation-duration:1s ;  
+  animation-delay:calc(0.1s * var(--i));
+  animation-iteration-count: infinite;
+}
+@keyframes load {
+  0%{
+      transform:translateY(0px) ;
+  }
+  40%{
+      transform: translateY(-10px) scale(1.2);
+  }
+  70%{
+      transform: translateY(0px);
+  }
+  
+}
